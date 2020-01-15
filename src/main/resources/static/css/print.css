@@ -1,0 +1,48 @@
+@import url("content.css");
+
+/* HIDDEN */
+.hidden, .break, .out, #main-menu, #foot-menu, #nav-skip, form, .side-menu, .paging, .next, .prev, #footer .menu, #footer .share, #lang{display: none;}
+
+body { font-size:8pt; }
+
+a {text-decoration:none; color:#000;}
+a img{border:none;}
+
+#header{border-bottom: 0.25mm solid #000; padding-bottom:0.3cm;}
+#footer{border-top: 0.25mm solid #000; padding-top:0.3cm; margin-top:0.6cm;}
+
+h1{font-size:20pt; margin:0.6cm 0 0.3cm;}
+h2{font-size:14pt; margin:0.5cm 0 0.1cm;}
+h3{ margin:0.5cm 0 0.1cm; font-size:13pt;}
+h4{ margin:0.5cm 0 0.1cm; font-size:12pt;}
+h5{ margin:0.5cm 0 0.1cm; font-size:10.5pt;}
+h6{ margin:0.5cm 0 0.1cm; font-size:9pt;}
+p{margin:0.1cm 0 0.4cm; font-size:8pt; line-height:11pt; }
+
+
+.att-images{margin:1cm 0 0;}
+.att-images .item{display:inline; margin:0 0.5cm 0.5cm 0cm; }
+.att-images br{display:none}
+.att-images ul{margin:0; padding:0;}
+
+.related-images li { display:inline; }
+
+.crossroad .item{list-style:none; padding:0; margin:.8cm 0;}
+.crossroad{margin:0; padding:0;}
+.crossroad .name{display:block; margin:.2cm 0 0;}
+
+ul {list-style: disc outside none; margin:0 0 0 20px; line-height:11pt; }
+ul ul { margin:8px 0 0 20px; }
+ul li {background:none; padding-left:2px; overflow:visible !important;}
+
+ol { line-height:11pt; }
+
+
+.emphasis { font-size:20pt; line-height:24pt; }
+.emphasis-small { font-size:13pt; line-height:16pt; }
+
+
+td, th { padding:0.1cm 0.3cm; border: 0.25mm solid #000;  }
+thead th { padding:0.1cm 0.3cm; }
+
+blockquote { border: 0.25mm solid #000; padding:0.3cm 0.3cm 1px; }

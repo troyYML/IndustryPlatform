@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+    <generatorConfiguration>
+    <classPathEntry location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\8.0.17\mysql-connector-java-8.0.17.jar"/>
+
+        <context id="DB2Tables" targetRuntime="MyBatis3" defaultModelType="conditional">
+
+
+            <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                            connectionURL="jdbc:mysql://localhost:3306/indb?serverTimezone=UTC"
+                            userId="root"
+                            password="root">
+            </jdbcConnection>
+            <!-- Model生成配置 targetPackage：生成包路径，自动生成目录。targetProject：项目路经，可以绝对路径或者相对路径。 -->
+            <javaModelGenerator targetPackage="com.industry.platform.dto.generator" targetProject="src/main/java">
+                <!-- enableSubPackages:是否让schema作为包的后缀 -->
+                <property name="enableSubPackages" value="true" />
+                <!-- 从数据库返回的值被清理前后的空格  -->
+                <property name="trimStrings" value="true" />
+            </javaModelGenerator>
+            <!-- sqlMap配置 -->
+            <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+                <property name="enableSubPackages" value="true" />
+            </sqlMapGenerator>
+            <!-- DAO接口的生成 -->
+            <javaClientGenerator type="XMLMAPPER" targetPackage="com.industry.platform.dao.generator" targetProject="src/main/java">
+                <property name="enableSubPackages" value="true" />
+            </javaClientGenerator>
+            <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名，如果未指定自动基于表名生成 -->
+            <!-- table其他属性：enableCountByExample="false"；enableUpdateByExample="false"；enableDeleteByExample="false"；enableSelectByExample="false"；selectByExampleQueryId="false"；schema即为数据库名, tableName为对应的数据库表, domainObjectName是要生成的实体类 -->
+            <table schema="hr" tableName="indb_product_detail" domainObjectName="IndbProductDetail">
+                <!-- 忽略字段 -->
+                <!--<ignoreColumn column="columnName" />-->
+
+                <!-- 无论字段是什么类型，生成的类属性都是varchar -->
+                <!--<columnOverride column="columnName" jdbcType="VARCHAR" />-->
+                <!-- 修改数据库列名映射的javabean属性名 -->
+                <!--<columnOverride column="oldColumnName" property="propertyName" />-->
+
+                <!-- 主键生成 如果用了这个 generatedKey ,MBG将在sqlmpper.xml里生成一个 selectKey元素在用在<insert>元素里 。 -->
+                <!--<generatedKey column="columnName" sqlStatement="JDBC" identity="true" />-->
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+
+                <!-- javabean继承的父类 -->
+                <!--<property name="rootClass" value="com.xxx.commons.entity.IdEntity"/>
+
+                <property name="useActualColumnNames" value="true"/>-->
+            </table>
+            <table schema="hr" tableName="indb_product_detail" domainObjectName="IndbProductDetail">
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
+            <table schema="hr" tableName="indb_product_tag" domainObjectName="IndbProductTag">
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
+            <table schema="hr" tableName="indb_news" domainObjectName="IndbNews">
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
+            <table schema="hr" tableName="indb_property" domainObjectName="IndbProperty">
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
+            <table schema="hr" tableName="indb_banner" domainObjectName="IndbBanner">
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
+            <table schema="hr" tableName="indb_contract" domainObjectName="IndbContract">
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
+        </context>
+    </generatorConfiguration>
