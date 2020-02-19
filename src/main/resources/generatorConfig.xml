@@ -49,6 +49,15 @@
 
                 <property name="useActualColumnNames" value="true"/>-->
             </table>
+            <!--<table schema="hr" tableName="sys_menu" domainObjectName="SysMenu">
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>-->
+            <table schema="hr" tableName="indb_attachment" domainObjectName="IndbAttachment">
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
+            <table schema="hr" tableName="indb_article" domainObjectName="IndbArticle">
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
             <table schema="hr" tableName="indb_product_detail" domainObjectName="IndbProductDetail">
                 <generatedKey column="id" sqlStatement="MySql" identity="true" />
             </table>
@@ -65,6 +74,9 @@
                 <generatedKey column="id" sqlStatement="MySql" identity="true" />
             </table>
             <table schema="hr" tableName="indb_contract" domainObjectName="IndbContract">
+                <generatedKey column="id" sqlStatement="MySql" identity="true" />
+            </table>
+            <table schema="hr" tableName="indb_user_info" domainObjectName="IndbUserInfo">
                 <generatedKey column="id" sqlStatement="MySql" identity="true" />
             </table>
         </context>

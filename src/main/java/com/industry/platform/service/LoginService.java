@@ -1,4 +1,4 @@
-package com.industry.platform.service.login;
+package com.industry.platform.service;
 
 
 import com.industry.platform.dto.generator.IndbUserInfo;

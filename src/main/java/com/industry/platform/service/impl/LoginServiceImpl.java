@@ -1,9 +1,9 @@
-package com.industry.platform.service.login.impl;
+package com.industry.platform.service.impl;
 
 import com.industry.platform.dao.generator.IndbUserInfoMapper;
 import com.industry.platform.dto.generator.IndbUserInfo;
 import com.industry.platform.dto.generator.IndbUserInfoExample;
-import com.industry.platform.service.login.LoginService;
+import com.industry.platform.service.LoginService;
 import com.industry.platform.utils.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
